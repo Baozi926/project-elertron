@@ -1,6 +1,7 @@
 import mapboxgl from "!mapbox-gl";
 import "@mapbox/mapbox-gl-draw/dist/mapbox-gl-draw.css";
 import MapboxDraw from "@mapbox/mapbox-gl-draw";
+import "mapbox-gl/dist/mapbox-gl.css";
 
 mapboxgl.accessToken =
   "pk.eyJ1IjoiYmFvemk5MjYiLCJhIjoiZTU0MzM1YmEyNDY3NWJiZDRlZDI5NWFiZDQzZWYyNDYifQ.GwGVNSoHJdykgvSuFvXOsQ";

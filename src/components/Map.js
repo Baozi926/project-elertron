@@ -1,7 +1,7 @@
-import "mapbox-gl/dist/mapbox-gl.css";
 import React, { useRef, useEffect, useCallback, useState } from "react";
 import "./Map.css";
 import * as turf from "@turf/turf";
+import mapboxgl from "!mapbox-gl";
 
 import mapService from "../services/mapService";
 import DataUploader from "./DataUploader";
@@ -75,6 +75,28 @@ function Map() {
 
     map.on("load", () => {
       parseFile(createMock());
+    });
+
+    map.on("click", towerPoleLayerId, (e) => {
+      // Copy coordinates array.
+      if (e.features.length === 0) {
+        return;
+      }
+
+      const coordinates = e.features[0].geometry.coordinates.slice();
+      const description = e.features[0].properties.name;
+
+      // Ensure that if the map is zoomed out such that multiple
+      // copies of the feature are visible, the popup appears
+      // over the copy being pointed to.
+      while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+        coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+      }
+
+      new mapboxgl.Popup()
+        .setLngLat(coordinates)
+        .setHTML(description)
+        .addTo(map);
     });
 
     // map.on("click", (evt) => {
