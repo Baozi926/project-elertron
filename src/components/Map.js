@@ -55,6 +55,7 @@ function Map() {
 
   const clearSelection = useCallback(() => {
     mapService.clearSelection(towerPoleLayerId);
+    setList(mapService.map.getSource("towerPole").serialize().data.features);
   });
 
   const startRangeSearch = useCallback(() => {
@@ -119,6 +120,8 @@ function Map() {
 
         const featuresIds = [];
 
+        const selectFeatures = [];
+
         features.forEach((feature) => {
           if (
             turf.booleanPointInPolygon(feature.geometry.coordinates, geometry)
@@ -126,11 +129,14 @@ function Map() {
             // only add the property, if the feature intersects with the polygon drawn by the user
 
             featuresIds.push(feature.id);
+            selectFeatures.push(feature);
           }
         });
         // map2.setFilter("selected", filter);
 
         mapService.setSelectedFeatures(towerPoleLayerId, featuresIds);
+
+        setList(selectFeatures);
       }
 
       mapService.draw.deleteAll();
