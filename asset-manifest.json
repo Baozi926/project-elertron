@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/project-elertron/static/css/main.01bcd885.css",
-    "main.js": "/project-elertron/static/js/main.a7e42a91.js",
+    "main.css": "/project-elertron/static/css/main.1949547a.css",
+    "main.js": "/project-elertron/static/js/main.52bb3b40.js",
     "static/js/787.28cb0dcd.chunk.js": "/project-elertron/static/js/787.28cb0dcd.chunk.js",
     "index.html": "/project-elertron/index.html",
-    "main.01bcd885.css.map": "/project-elertron/static/css/main.01bcd885.css.map",
-    "main.a7e42a91.js.map": "/project-elertron/static/js/main.a7e42a91.js.map",
+    "main.1949547a.css.map": "/project-elertron/static/css/main.1949547a.css.map",
+    "main.52bb3b40.js.map": "/project-elertron/static/js/main.52bb3b40.js.map",
     "787.28cb0dcd.chunk.js.map": "/project-elertron/static/js/787.28cb0dcd.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.01bcd885.css",
-    "static/js/main.a7e42a91.js"
+    "static/css/main.1949547a.css",
+    "static/js/main.52bb3b40.js"
   ]
 }
