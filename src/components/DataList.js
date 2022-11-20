@@ -2,8 +2,9 @@ import React from "react";
 import { List, Button } from "antd";
 import "./DataList.css";
 import TowerPoleItem from "./ListItem/TowerPoleItem";
+import { ClearOutlined } from "@ant-design/icons";
 
-function DataList({ data = [], startRangeSearch }) {
+function DataList({ data = [], startRangeSearch, clearSelection }) {
   return (
     <List
       className="antd-data-list"
@@ -16,7 +17,14 @@ function DataList({ data = [], startRangeSearch }) {
                 startRangeSearch();
               }}
             >
-              范围查询
+              按范围查询
+            </Button>
+            <Button
+              onClick={() => {
+                clearSelection();
+              }}
+            >
+              <ClearOutlined />
             </Button>
           </div>
         </div>

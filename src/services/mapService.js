@@ -17,12 +17,12 @@ class Map {
     this.draw = new MapboxDraw({
       displayControlsDefault: false,
       controls: {
-        polygon: true,
-        trash: true,
+        // polygon: true,
+        // trash: true,
       },
       // Set mapbox-gl-draw to draw by default.
       // The user does not have to click the polygon control button first.
-      defaultMode: "draw_polygon",
+      // defaultMode: "draw_polygon",
     });
 
     this.map.addControl(this.draw, "bottom-right");
@@ -132,6 +132,12 @@ class Map {
 
   startDrawPolygon() {
     this.draw.changeMode("draw_polygon");
+  }
+
+  clearSelection(id) {
+    this.map.removeFeatureState({
+      source: id,
+    });
   }
 
   setSelectedFeatures(id, featureIds) {

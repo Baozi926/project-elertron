@@ -53,6 +53,10 @@ function Map() {
 
   const towerPoleLayerId = "towerPole";
 
+  const clearSelection = useCallback(() => {
+    mapService.clearSelection(towerPoleLayerId);
+  });
+
   const startRangeSearch = useCallback(() => {
     mapService.startDrawPolygon();
   });
@@ -156,6 +160,7 @@ function Map() {
           className="data-list"
           data={list}
           startRangeSearch={startRangeSearch}
+          clearSelection={clearSelection}
         ></DataList>
       </div>
       <div ref={mapContainer} className="map-container" />;
