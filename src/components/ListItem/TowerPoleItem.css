@@ -1,0 +1,14 @@
+.tower-pole-item{
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.tower-pole-item .main{
+  margin-left: 4px;
+
+}
+
+.tower-pole-item .right{
+    margin-left: auto;
+}

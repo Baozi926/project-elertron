@@ -1,0 +1,59 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+          "name":"测试1"
+      },
+      "geometry": {
+        "coordinates": [114.34663736297625, 30.53489469565521],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+
+        "name":"测试2"
+      },
+      "geometry": {
+        "coordinates": [114.34875566541297, 30.5681867697552],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+
+        "name":"测试3"
+      },
+      "geometry": {
+        "coordinates": [114.44196097262744, 30.58323286318378],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+
+        "name":"测试4"
+      },
+      "geometry": {
+        "coordinates": [114.41283431412239, 30.51687573149775],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+
+        "name":"测试5"
+      },
+      "geometry": {
+        "coordinates": [114.31459803862032, 30.51641951182539],
+        "type": "Point"
+      }
+    }
+  ]
+}

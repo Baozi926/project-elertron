@@ -1,0 +1,15 @@
+.antd-data-list{
+    height: 100%;
+    overflow-y: auto;
+}
+
+.antd-data-list .header>.tools{
+    margin-left: auto;
+}
+
+
+.antd-data-list .header{
+    display: flex;
+    width: 100%;
+    align-items: center;
+}

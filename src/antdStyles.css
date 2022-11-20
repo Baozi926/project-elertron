@@ -1,0 +1,4 @@
+.ant-list-header{
+    display: flex;
+    flex-direction: row;
+}
